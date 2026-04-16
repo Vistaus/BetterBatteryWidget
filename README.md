@@ -11,6 +11,15 @@ This is a lightweight, minimal battery widget for KDE Plasma 6. I find the defau
  - Percentage font selection, styles (Bold for now), size, position, ....
  - Battery icon size
 
-***Hey!*** Currently (version 1.0) doesn't have the option to turn on save energy yet (sorry, this is optimzed for TLP users)
+~~***Hey!*** Currently (version 1.0) doesn't have the option to turn on save energy yet (sorry, this is optimzed for TLP users)~~ This feature might be done? 
+
+**FOR TLP USERS: you might have to authenticate when you enable battery saving, anyone knows how to do it? Make a pull request if you know!**
 
 Credits to Command output (https://github.com/Zren/plasma-applet-commandoutput) for libraries! (FontFamily, ComboBox)
+
+there might be bugs, report it in the "Issues" tab
+
+# Changelogs
+version 1.0: initial
+
+version 2.0: added battery saver feature, translated into dutch language by @Vistaus

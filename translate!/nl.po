@@ -1,4 +1,4 @@
-# Translation of betterbatterywidget in LANGUAGE
+# Translation of betterbatterywidget in nl
 # Copyright (C) 2026
 # This file is distributed under the same license as the betterbatterywidget package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
@@ -73,6 +73,10 @@ msgstr "Aan het opladen"
 #: ../contents/ui/FullPopup.qml
 msgid "Discharging"
 msgstr "Aan het ontladen"
+
+#: ../contents/ui/FullPopup.qml
+msgid "Power saving mode"
+msgstr ""
 
 #: ../contents/ui/FullPopup.qml
 msgid "Power settings..."

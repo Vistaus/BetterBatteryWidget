@@ -74,6 +74,10 @@ msgid "Discharging"
 msgstr ""
 
 #: ../contents/ui/FullPopup.qml
+msgid "Power saving mode"
+msgstr ""
+
+#: ../contents/ui/FullPopup.qml
 msgid "Power settings..."
 msgstr ""
 
