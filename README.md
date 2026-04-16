@@ -21,4 +21,5 @@ there might be bugs, report it in the "Issues" tab
 
 # Changelogs
 version 1.0: initial
+
 version 2.0: added battery saver feature, translated into dutch language by @Vistaus
