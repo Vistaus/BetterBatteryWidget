@@ -1,4 +1,4 @@
-# Translation of betterbatterywidget in LANGUAGE
+# Translation of betterbatterywidget in nl
 # Copyright (C) 2026
 # This file is distributed under the same license as the betterbatterywidget package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
@@ -9,69 +9,70 @@ msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-15 22:30+0700\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2026-04-16 10:46+0200\n"
+"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
+"Language-Team: \n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.8\n"
 
 #: ../metadata.desktop
 msgid "Better battery widget"
-msgstr ""
+msgstr "De betere accuwidget"
 
 #: ../contents/config/config.qml
 msgid "Appearance"
-msgstr ""
+msgstr "Vormgeving"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Font family:"
-msgstr ""
+msgstr "Lettertype:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Font size:"
-msgstr ""
+msgstr "Tekstgrootte:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Font formatting:"
-msgstr ""
+msgstr "Tekstopmaak:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Bold"
-msgstr ""
+msgstr "Vetgedrukt"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Icon size:"
-msgstr ""
+msgstr "Pictogramgrootte:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Percentage position:"
-msgstr ""
+msgstr "Percentage tonen:"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "On the right"
-msgstr ""
+msgstr "Aan rechterkant"
 
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Font padding:"
-msgstr ""
+msgstr "Tekstopvulling:"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Battery percentage"
-msgstr ""
+msgstr "Accupercentage"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Fully charged"
-msgstr ""
+msgstr "Volledig opgeladen"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Charging"
-msgstr ""
+msgstr "Aan het opladen"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Discharging"
-msgstr ""
+msgstr "Aan het ontladen"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Power saving mode"
@@ -79,9 +80,9 @@ msgstr ""
 
 #: ../contents/ui/FullPopup.qml
 msgid "Power settings..."
-msgstr ""
+msgstr "Energie-instellingen…"
 
 #: ../contents/ui/libs/FontFamily.qml
 msgctxt "Use default font"
 msgid "Default"
-msgstr ""
+msgstr "Standaardlettertype"

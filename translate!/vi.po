@@ -16,6 +16,9 @@ msgstr "Đang dùng pin"
 msgid "Fully charged"
 msgstr "Đã sạc đầy pin"
 
+msgid "Power saving mode"
+msgstr "Chế độ tiết kiệm pin"
+
 msgid "Font family:"
 msgstr "Phông chữ:"
 
