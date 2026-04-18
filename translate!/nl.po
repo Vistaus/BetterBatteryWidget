@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-18 12:55+0700\n"
-"PO-Revision-Date: 2026-04-18 10:44+0200\n"
+"POT-Creation-Date: 2026-04-18 20:38+0700\n"
+"PO-Revision-Date: 2026-04-18 19:18+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -73,6 +73,10 @@ msgstr "Minuten"
 #: ../contents/ui/config/ConfigAppearance.qml
 msgid "Simplified time"
 msgstr "Eenvoudige tijdweergave"
+
+#: ../contents/ui/config/ConfigAppearance.qml
+msgid "Enable time remaining"
+msgstr "Resterende tijd tonen"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Battery percentage"
