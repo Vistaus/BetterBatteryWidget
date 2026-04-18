@@ -125,12 +125,17 @@ Item {
 
             PlasmaComponents.Label {
                 text: {
-                    let state = popupRoot.charging ? i18n("Charge time left: ") : i18n("Battery time left: ");
-                    return state + popupRoot.timeleft;
+                    if (popupRoot.timeleft === "PlsDontFeedMe") {
+                        return;
+                    } else {
+                        let state = popupRoot.charging ? i18n("Charge time left: ") : i18n("Battery time left: ");
+                        return state + popupRoot.timeleft;
+                    }
                 }
                 opacity: 0.7
                 Layout.topMargin: 3
                 Layout.minimumWidth: implicitWidth
+                visible: Plasmoid.configuration.timeLeft
             }
 
             // switch for power saving

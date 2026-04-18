@@ -27,7 +27,7 @@ PlasmoidItem {
                 root.isCharge = (data["State"] === "Charging" || data["State"] === "FullyCharged" || data["PluggedIn"] === true)
 
                 root.isFull = (data["State"] === "FullyCharged")
-                root.timeleft = data["Smoothed Remaining msec"] || "Unknown"
+                root.timeleft = data["Smoothed Remaining msec"]
             }
         }
     }
@@ -82,22 +82,27 @@ PlasmoidItem {
     }
 
     function formatTime(msec) {
-        if (msec <= 0) return i18n("Calculating...");
-        let tMin = Math.floor(msec / 60000);
-        let hr = Math.floor(tMin / 60);
-        let m = tMin % 60;
-        let s = Math.floor((msec % 60000) / 1000)
-        // get the padded time
-        let hrpadded = hr.toString().padStart(2, '0');
-        let mpadded = m.toString().padStart(2, '0');
-        let spadded = s.toString().padStart(2, '0');
-        // not simplified or there's more than 1 hour left?
-        if (hr > 0 || Plasmoid.configuration.simpleTime === false) {
-            // user enabled padding?
-            let hour =  Plasmoid.configuration.padHr ? hrpadded : hr
-            return hour + ":" + mpadded + ":" + spadded;
+        if (msec < 0 || isNaN(msec) || msec === null) {
+            return i18n("Calculating...");
+        } else if (msec == 0) {
+            return "PlsDontFeedMe"
+        } else {
+            let tMin = Math.floor(msec / 60000);
+            let hr = Math.floor(tMin / 60);
+            let m = tMin % 60;
+            let s = Math.floor((msec % 60000) / 1000)
+            // get the padded time
+            let hrpadded = hr.toString().padStart(2, '0');
+            let mpadded = m.toString().padStart(2, '0');
+            let spadded = s.toString().padStart(2, '0');
+            // not simplified or there's more than 1 hour left?
+            if (hr > 0 || Plasmoid.configuration.simpleTime === false) {
+                // user enabled padding?
+                let hour =  Plasmoid.configuration.padHr ? hrpadded : hr
+                return hour + ":" + mpadded + ":" + spadded;
+            }
+            let min = Plasmoid.configuration.padMin ? mpadded : m
+            return min + ":" + spadded;
         }
-        let min = Plasmoid.configuration.padMin ? mpadded : m
-        return min + ":" + spadded;
     }
 }

@@ -15,7 +15,8 @@ Item {
     property alias cfg_fontposR: fontposRCheckBox.checked
     property alias cfg_padHr: padHrChkBox.checked
     property alias cfg_padMin: padMinChkBox.checked
-    property alias cfg_simpleTime: simpleTimeChxBox.checked
+    property alias cfg_simpleTime: simpleTimeChkBox.checked
+    property alias cfg_timeLeft: timeLeftChkBox.checked
 
     Kirigami.FormLayout {
 
@@ -71,8 +72,14 @@ Item {
         }
 
         CheckBox {
-            id: simpleTimeChxBox
+            id: simpleTimeChkBox
             Kirigami.FormData.label: i18n("Simplified time")
+        }
+
+
+        CheckBox {
+            id: timeLeftChkBox
+            Kirigami.FormData.label: i18n("Enable time remaining")
         }
     }
 }
