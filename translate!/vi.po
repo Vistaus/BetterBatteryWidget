@@ -56,7 +56,7 @@ msgid "Calculating..."
 msgstr "Đang tính..."
 
 msgid "Battery time left: "
-msgstr "Thời gian dùng: "
+msgstr "Thời gian dùng còn lại: "
 
 msgid "Block sleep"
 msgstr "Chặn ngủ"
@@ -72,3 +72,6 @@ msgstr "Phút"
 
 msgid "Simplified time"
 msgstr "Thời gian rút gọn"
+
+msgid "Enable time remaining"
+msgstr "Xem thời gian còn lại"
