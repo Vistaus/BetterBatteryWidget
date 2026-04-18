@@ -61,7 +61,7 @@ Item {
 
         CheckBox {
             id: padHrChkBox
-            Kirigami.FormData.label: i18n("Time remaining padding:") // aka "add the "0" before:"
+            Kirigami.FormData.label: i18n("Add leading zero before:")
             text: i18n("Hours")
         }
 

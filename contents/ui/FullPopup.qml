@@ -17,6 +17,9 @@ Item {
     property string health: "100%"
     property string timeleft: "0"
 
+    Layout.minimumWidth: mainLayout.implicitWidth  // oh my god this finally works, QML too hard
+    Layout.minimumHeight: mainLayout.implicitHeight
+
     SleepBlocker {
         id: sleepBlockerRoot
     }
@@ -72,17 +75,15 @@ Item {
         }
     }
 
-    // popup size
-    width: Kirigami.Units.gridUnit * 16
-    height: mainLayout.implicitHeight + Kirigami.Units.largeSpacing * 2
-
     ColumnLayout {
         id: mainLayout
         anchors {
-            fill: parent
+            centerIn: parent
             margins: Kirigami.Units.largeSpacing
         }
         spacing: Kirigami.Units.largeSpacing
+
+        Layout.minimumWidth: implicitWidth
 
         // headers
         RowLayout {
@@ -111,6 +112,7 @@ Item {
                     return popupRoot.charging ? i18n("Charging") : i18n("Discharging")
                 }
                 opacity: 0.7
+                Layout.minimumWidth: implicitWidth
             }
 
             PlasmaComponents.Label {
@@ -118,6 +120,7 @@ Item {
                 font.pixelSize: 48
                 font.weight: Font.Bold
                 Layout.topMargin: -5
+                Layout.minimumWidth: implicitWidth
             }
 
             PlasmaComponents.Label {
@@ -127,6 +130,7 @@ Item {
                 }
                 opacity: 0.7
                 Layout.topMargin: 3
+                Layout.minimumWidth: implicitWidth
             }
 
             // switch for power saving
