@@ -23,3 +23,9 @@ there might be bugs, report it in the "Issues" tab
 version 1.0: initial
 
 version 2.0: added battery saver feature, translated into dutch language by @Vistaus
+
+version 3.0: added:
+- blocking sleep
+- charge / usage time remaining
+
+(sorry if my English is terrible)
