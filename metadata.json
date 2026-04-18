@@ -6,6 +6,10 @@
                 "Email": "minhkhangdinh24013@gmail.com",
                 "Name": "itsKhang"
             }
+            {
+                "Email": "vistausss@fastmail.com",
+                "Name": "Heimen Stoffels (Vistaus)"
+            }
         ],
         "Category": "Battery",
         "Description": "Just another simple battery plasmoid.",
@@ -14,7 +18,7 @@
         "License": "GPL-2.0+",
         "Name": "Better battery widget",
         "ServiceTypes": ["Plasma/Applet"],
-        "Version": "3.0.0"
+        "Version": "3.1"
     },
     "X-Plasma-Provides":"org.kde.plasma.powermanagement",
     "X-Plasma-API-Minimum-Version": "6.0",
