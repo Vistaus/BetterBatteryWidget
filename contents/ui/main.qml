@@ -27,9 +27,33 @@ PlasmoidItem {
                 root.isCharge = (data["State"] === "Charging" || data["State"] === "FullyCharged" || data["PluggedIn"] === true)
 
                 root.isFull = (data["State"] === "FullyCharged")
-                root.timeleft = data["Smoothed Remaining msec"]
+                root.timeleft = data["Smoothed Remaining msec"] || ""
                 root.timeleft = formatTime(root.timeleft)
             }
+        }
+    }
+
+    Plasma5Support.DataSource {
+        id: exec
+        engine: "executable"
+        connectedSources: []
+        onNewData: (sourceName, data) => {
+            var output = data["stdout"].trim() || "";
+            // split the line to read the values
+            var line = output.trim().split('\n');
+
+            if (line.length >= 2) {
+                let chargeFull = parseInt(line[0]);
+                let chargeNew = parseInt(line[1]);
+
+                let bathealth = parseFloat(((chargeFull / chargeNew) * 100).toFixed(2)); // Make the calcs, cut de decimals, throw the unnecessary 0s away
+                root.health = bathealth + "%";
+            }
+            disconnectSource(sourceName);
+        }
+
+        function runCMD(cmd) {
+            connectSource(cmd);
         }
     }
 
@@ -88,8 +112,6 @@ PlasmoidItem {
     function formatTime(msec) {
         if (msec < 0 || isNaN(msec) || msec === null) {
             return i18n("Calculating...");
-        } else if (msec == 0) {
-            return "PlsDontFeedMe"
         } else {
             let tMin = Math.floor(msec / 60000);
             let hr = Math.floor(tMin / 60);
@@ -107,6 +129,15 @@ PlasmoidItem {
             }
             let min = Plasmoid.configuration.padMin ? mpadded : m
             return min + ":" + spadded;
+        }
+    }
+
+    Timer {
+        interval: 2000
+        running: true
+        repeat: true
+        onTriggered: {
+            exec.runCMD("cat /sys/class/power_supply/BAT0/charge_full /sys/class/power_supply/BAT0/charge_full_design");
         }
     }
 }

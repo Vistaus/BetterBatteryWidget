@@ -75,3 +75,6 @@ msgstr "Thời gian rút gọn"
 
 msgid "Enable time remaining"
 msgstr "Xem thời gian còn lại"
+
+msgid "Battery health: "
+msgstr "Sức chứa pin: "

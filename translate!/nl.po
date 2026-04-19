@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: betterbatterywidget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-18 20:38+0700\n"
+"POT-Creation-Date: 2026-04-19 23:21+0700\n"
 "PO-Revision-Date: 2026-04-18 19:18+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: \n"
@@ -103,6 +103,10 @@ msgid "Battery time left: "
 msgstr "Resterende accuduur: "
 
 #: ../contents/ui/FullPopup.qml
+msgid "Battery health: "
+msgstr "Accugezondheid: "
+
+#: ../contents/ui/FullPopup.qml
 msgid "Power saving mode"
 msgstr "Energiebesparingsmodus"
 
@@ -112,7 +116,7 @@ msgstr "Slaapstand onderdrukken"
 
 #: ../contents/ui/FullPopup.qml
 msgid "Power settings..."
-msgstr "Energie-instellingen…"
+msgstr "Energie-instellingen..."
 
 #: ../contents/ui/libs/FontFamily.qml
 msgctxt "Use default font"
@@ -121,4 +125,4 @@ msgstr "Standaardlettertype"
 
 #: ../contents/ui/main.qml
 msgid "Calculating..."
-msgstr "Bezig met berekenen…"
+msgstr "Bezig met berekenen..."

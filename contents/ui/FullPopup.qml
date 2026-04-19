@@ -38,8 +38,6 @@ Item {
         connectedSources: ["Battery"]
         onDataChanged: {
             popupRoot.ispwrSave = data["Battery"]["Power Save Mode"] || false;
-            console.log(mainLayout.implicitWidth, ", ", mainLayout.implicitHeight)
-            console.log(popupRoot.width, ", ", popupRoot.height)
         }
     }
 
@@ -121,7 +119,7 @@ Item {
             Layout.fillHeight: true
             PlasmaComponents.Label {
                 text: {
-                    if (widgetdata.full === true) {
+                    if (widgetdata.isFull) {
                         return i18n("Fully charged");
                     }
                     return widgetdata.isCharge ? i18n("Charging") : i18n("Discharging")
@@ -136,19 +134,45 @@ Item {
                 Layout.topMargin: -5
             }
 
-            PlasmaComponents.Label {
-                text: {
-                    if (widgetdata.timeleft === "PlsDontFeedMe") {
-                        return;
-                    } else {
-                        let state = widgetdata.isCharge ? i18n("Charge time left: ") : i18n("Battery time left: ");
-                        return state + widgetdata.timeleft;
+            GridLayout {
+                Layout.fillWidth: true
+                Layout.topMargin: 3
+                columns: 2
+
+                PlasmaComponents.Label {
+                    text: widgetdata.isCharge ? i18n("Charge time left: ") : i18n("Battery time left: ");
+                    opacity: 0.7
+                    Layout.topMargin: 3
+                    visible: Plasmoid.configuration.timeLeft && !widgetdata.isFull
+                    Layout.fillWidth: true
+                }
+
+                PlasmaComponents.Label {
+                    text: widgetdata.timeleft
+                    opacity: 0.7
+                    Layout.topMargin: 3
+                    visible: Plasmoid.configuration.timeLeft && !widgetdata.isFull
+                }
+
+                PlasmaComponents.Label {
+                    text: i18n("Battery health: ")
+                    opacity: 0.7
+                    Layout.fillWidth: true
+                }
+                PlasmaComponents.Label {
+                    text: widgetdata.health
+                    opacity: 0.7
+                    color: {
+                        let healthInt = parseInt(widgetdata.health);
+
+                        if (healthInt >= 90) return "#64EB1C" // it's new!!!
+                        if (healthInt >= 70) return "#5ED61C" // still going strong
+                        if (healthInt >= 50) return "#E5F21B" // degrading
+                        return "#FF361C" // god bless your battery
                     }
                 }
-                opacity: 0.7
-                Layout.topMargin: 3
-                visible: Plasmoid.configuration.timeLeft
             }
+
         }
 
         ColumnLayout {

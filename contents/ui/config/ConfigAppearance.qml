@@ -32,6 +32,7 @@ Item {
             Kirigami.FormData.label: i18n("Font size:")
             from: 6
             to: 72
+            value: root.cfg_fontSize
         }
 
         CheckBox {
