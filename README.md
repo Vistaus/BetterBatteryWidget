@@ -29,3 +29,10 @@ version 3.0: added:
 - charge / usage time remaining
 
 (sorry if my English is terrible)
+
+# Images
+![Taskbar icon](https://github.com/itsKhangQBit/BetterBatteryWidget/blob/49376d5f2a1406d8ff32cfdd367c328591c46c44/screenshots/taskbar.png)
+<br><br>
+![Popup / Full representation (English)](https://github.com/itsKhangQBit/BetterBatteryWidget/blob/49376d5f2a1406d8ff32cfdd367c328591c46c44/screenshots/fullrep_en.png)
+<br><br>
+![Popup / Full representation (Vietnamese)](https://github.com/itsKhangQBit/BetterBatteryWidget/blob/49376d5f2a1406d8ff32cfdd367c328591c46c44/screenshots/fullrep_vi.png)
