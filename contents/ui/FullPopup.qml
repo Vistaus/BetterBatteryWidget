@@ -27,6 +27,8 @@ Item {
 
     Layout.preferredWidth: implicitWidth + (Kirigami.Units.largeSpacing * 5)
     Layout.preferredHeight: implicitHeight + (Kirigami.Units.largeSpacing * 5)
+    Layout.minimumWidth: implicitWidth + (Kirigami.Units.largeSpacing * 5)
+    Layout.minimumHeight: implicitHeight + (Kirigami.Units.largeSpacing * 5)
 
     SleepBlocker {
         id: sleepBlockerRoot
