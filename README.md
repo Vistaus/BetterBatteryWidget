@@ -36,6 +36,8 @@ version 3.0: added:
 ![Popup / Full representation (English)](https://github.com/itsKhangQBit/BetterBatteryWidget/blob/49376d5f2a1406d8ff32cfdd367c328591c46c44/screenshots/fullrep_en.png)
 <br><br>
 ![Popup / Full representation (Vietnamese)](https://github.com/itsKhangQBit/BetterBatteryWidget/blob/49376d5f2a1406d8ff32cfdd367c328591c46c44/screenshots/fullrep_vi.png)
+<br><br>
+![Popup / Full representation (Dutch)](https://github.com/itsKhangQBit/BetterBatteryWidget/blob/485b9590aea563054eeb1d6ea0a9eb078d08e0dd/screenshots/fullrep_nl)
 
 **Please help me translate this applet into multi languages, if you can!! I'd be very grateful for that!**
 
