@@ -99,13 +99,6 @@ PlasmoidItem {
 
     // Popup
     fullRepresentation: FullPopup {
-        /*
-        percent: root.percent
-        charging: root.isCharge
-        full: root.isFull
-        icon: root.icon
-        timeleft: formatTime(root.timeleft)
-        */
         widgetdata: root
     }
 
@@ -133,7 +126,7 @@ PlasmoidItem {
     }
 
     Timer {
-        interval: 2000
+        interval: 60000
         running: true
         repeat: true
         onTriggered: {

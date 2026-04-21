@@ -4,7 +4,7 @@
         "Authors": [
             {
                 "Email": "minhkhangdinh24013@gmail.com",
-                "Name": "itsKhang"
+                "Name": "itsKhangQBit"
             },
             {
                 "Email": "vistausss@fastmail.com",
@@ -18,7 +18,7 @@
         "License": "GPL-2.0+",
         "Name": "Better battery widget",
         "ServiceTypes": ["Plasma/Applet"],
-        "Version": "3.3"
+        "Version": "4.0"
     },
     "X-Plasma-Provides":"org.kde.plasma.powermanagement",
     "X-Plasma-API-Minimum-Version": "6.0",

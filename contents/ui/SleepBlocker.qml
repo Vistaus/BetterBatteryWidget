@@ -11,6 +11,7 @@ Item {
     Plasma5Support.DataSource {
         id: exec
         engine: "executable"
+        interval: 2000
         connectedSources: []
         onNewData: {
             var output = data["stdout"] || "";
@@ -26,8 +27,8 @@ Item {
                 }
             }
 
-            // Stop immediately
-            disconnectSource(sourceName)
+            // Stop immediately.. or don't, it's not gonna self update
+            // disconnectSource(sourceName)
         }
 
         // just for running cmds below
