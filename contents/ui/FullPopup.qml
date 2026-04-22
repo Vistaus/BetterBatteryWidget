@@ -180,6 +180,14 @@ Item {
                 Layout.topMargin: -5
             }
 
+            // battery bar
+            PlasmaComponents.ProgressBar {
+                Layout.fillWidth: true
+                from: 0
+                to: 100
+                value: widgetdata.percent
+            }
+
             GridLayout {
                 Layout.fillWidth: true
                 Layout.topMargin: 3
@@ -204,17 +212,20 @@ Item {
                     text: i18n("Battery health: ")
                     opacity: 0.7
                     Layout.fillWidth: true
+                    visible: Plasmoid.configuration.healthLeft
                 }
+
                 PlasmaComponents.Label {
                     text: widgetdata.health
+                    visible: Plasmoid.configuration.healthLeft
                     opacity: 0.7
                     color: {
                         let healthInt = parseInt(widgetdata.health);
 
                         if (healthInt >= 90) return "#64EB1C" // it's new!!!
-                        if (healthInt >= 70) return "#5ED61C" // still going strong
-                        if (healthInt >= 50) return "#E5F21B" // degrading
-                        return "#FF361C" // god bless your battery
+                            if (healthInt >= 70) return "#5ED61C" // still going strong
+                                if (healthInt >= 50) return "#E5F21B" // degrading
+                                    return "#FF361C" // god bless your battery
                     }
                 }
             }
@@ -287,36 +298,29 @@ Item {
                     Layout.fillWidth: true
                     // space each icon equally.. or let it space itself!
 
-                    // performance
-                    Kirigami.Icon {
-                        Layout.alignment: Qt.AlignLeft
-                        Layout.preferredWidth: 22
-                        Layout.preferredHeight: 22
-                        source: "battery-profile-performance-symbolic"
-                        opacity: popupRoot.ispwrSave === 0 ? 1.0 : 0.4
-                        Behavior on opacity { NumberAnimation { duration: 200 } }
-                    }
-
-                    Item { Layout.fillWidth: true }
-
                     // powersave
                     Kirigami.Icon {
                         Layout.alignment: Qt.AlignRight
                         Layout.preferredWidth: 22
                         Layout.preferredHeight: 22
                         source: "battery-profile-powersave-symbolic"
-                        opacity: popupRoot.ispwrSave === 2 ? 1.0 : 0.4
+                        opacity: popupRoot.ispwrSave === 2 ? 0.4 : 1.0
                         Behavior on opacity { NumberAnimation { duration: 200 } }
                     }
-                }
-            }
 
-            // battery bar
-            PlasmaComponents.ProgressBar {
-                Layout.fillWidth: true
-                from: 0
-                to: 100
-                value: widgetdata.percent
+                    Item { Layout.fillWidth: true }
+
+                    // performance
+                    Kirigami.Icon {
+                        Layout.alignment: Qt.AlignLeft
+                        Layout.preferredWidth: 22
+                        Layout.preferredHeight: 22
+                        source: "battery-profile-performance-symbolic"
+                        opacity: popupRoot.ispwrSave === 0 ? 0.4 : 1.0
+                        Behavior on opacity { NumberAnimation { duration: 200 } }
+                    }
+
+                }
             }
 
             // settings button

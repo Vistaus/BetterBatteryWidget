@@ -17,6 +17,7 @@ Item {
     property alias cfg_padMin: padMinChkBox.checked
     property alias cfg_simpleTime: simpleTimeChkBox.checked
     property alias cfg_timeLeft: timeLeftChkBox.checked
+    property alias cfg_healthLeft: healthLeftChkBox.checked
 
     Kirigami.FormLayout {
 
@@ -81,6 +82,11 @@ Item {
         CheckBox {
             id: timeLeftChkBox
             Kirigami.FormData.label: i18n("Enable time remaining")
+        }
+
+        CheckBox {
+            id: healthLeftChkBox
+            Kirigami.FormData.label: i18n("Enable battery health")
         }
     }
 }

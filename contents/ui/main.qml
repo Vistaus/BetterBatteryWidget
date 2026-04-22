@@ -126,11 +126,11 @@ PlasmoidItem {
     }
 
     Timer {
-        interval: 60000
+        interval: 10000
         running: true
         repeat: true
         onTriggered: {
-            exec.runCMD("cat /sys/class/power_supply/BAT0/charge_full /sys/class/power_supply/BAT0/charge_full_design");
+            exec.runCMD("cat /sys/class/power_supply/BAT*/charge_full /sys/class/power_supply/BAT*/charge_full_design");
         }
     }
 }
