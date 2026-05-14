@@ -42,6 +42,16 @@ Item {
             text: i18n("Bold")
         }
 
+        CheckBox {
+            id: fontItalicCheckBox
+            text: i18n("Italic")
+        }
+
+        CheckBox {
+            id: fontUnderlineCheckbox
+            text: i18n("Underline")
+        }
+
         SpinBox {
             id: iconSizeSpinBox
             Kirigami.FormData.label: i18n("Icon size:")

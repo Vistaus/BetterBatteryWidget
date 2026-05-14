@@ -84,6 +84,8 @@ Item {
                 text: root.percent + "%"
                 font.pixelSize: plasmoid.configuration.fontSize
                 font.bold: plasmoid.configuration.fontBold
+                font.italic: Plasmoid.configuration.fontItalic
+                font.underline: Plasmoid.configuration.fontUnderline
                 font.family: plasmoid.configuration.fontFamily || Kirigami.Theme.defaultFont.family
             }
 
